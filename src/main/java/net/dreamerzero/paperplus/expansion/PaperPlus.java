@@ -15,12 +15,12 @@ public class PaperPlus extends PlaceholderExpansion {
 
     @Override
     public boolean canRegister() {
-		try{
-			Class.forName("io.papermc.paper.datapack.Datapack");
-			return true;
-		} catch(ClassNotFoundException e){
-			return false;
-		}
+        try{
+            Class.forName("io.papermc.paper.datapack.Datapack");
+            return true;
+        } catch(ClassNotFoundException e){
+            return false;
+        }
     }
 
     @Override
@@ -41,15 +41,15 @@ public class PaperPlus extends PlaceholderExpansion {
     @Override
     public String onRequest(OfflinePlayer player, String identifier) {
         NumberFormat numberFormat = NumberFormat.getInstance();
-		numberFormat.setRoundingMode(RoundingMode.DOWN);
-		numberFormat.setMaximumFractionDigits(2);
+        numberFormat.setRoundingMode(RoundingMode.DOWN);
+        numberFormat.setMaximumFractionDigits(2);
         switch (identifier) {
             case "server_mspt": return String.valueOf(numberFormat.format(Bukkit.getServer().getAverageTickTime()));
             case "player_lastplayed": case "player-lastjoin": return String.valueOf(player.getLastLogin());
             case "datapack_list": 
                 StringBuilder builder = new StringBuilder();
                 for (Datapack datapack : Bukkit.getServer().getDatapackManager().getEnabledPacks()) {
-					builder = builder.append("["+datapack.getName()+"]");
+                    builder = builder.append("["+datapack.getName()+"]");
                     builder = builder.append(" ");
                 }
                 return builder.toString();
