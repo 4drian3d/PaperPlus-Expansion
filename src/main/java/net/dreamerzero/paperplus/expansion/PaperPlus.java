@@ -84,6 +84,7 @@ public class PaperPlus extends PlaceholderExpansion {
         switch (identifier){
             case "player_viewdistance": return String.valueOf(playerOnline.getClientViewDistance());
             case "player_notickviewdistance": return String.valueOf(playerOnline.getClientViewDistance());
+            case "player_client": return playerOnline.getClientBrandName();
             default: break; 
         }
         return null;
