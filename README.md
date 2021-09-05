@@ -1,5 +1,5 @@
 # PaperPlus-Expansion
-An extension of PlaceholderAPI with placeholders exclusively for [Paper](https://papermc.io/) 1.17.1+.
+An extension of [PlaceholderAPI](https://placeholderapi.com/) with placeholders exclusively for [Paper](https://papermc.io/) 1.17.1+.
 
 ## Placeholders
 ```
@@ -10,6 +10,7 @@ An extension of PlaceholderAPI with placeholders exclusively for [Paper](https:/
 %paperplus_player_lastplayed%
 %paperplus_player_viewdistance%
 %paperplus_player_notickviewdistance%
+%paperplus_player_client%
 
 # Datapack Placeholders
 %paperplus_datapack_list%
